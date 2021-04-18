@@ -1,10 +1,11 @@
 // FOR LOOP
 // FOR LOOP PARA ARRAY
 
-let texto = '';
+let carros = ['Ferrari','Fusca','Palio','Corolla','Corsinha','Kadett'];
+let html = '<ul>';
 
-for (let i = 0; i <= 10; i++) {
-    texto = texto + i + '<br/>';
-
-};
-document.getElementById('demo').innerHTML = texto;
+for (let carro in carros){
+    html +='<li>'+ carros[carro] + '</li>';
+}
+html+= '</ul>';
+document.getElementById('demo').innerHTML = html;
