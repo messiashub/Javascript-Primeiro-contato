@@ -33,43 +33,43 @@ let lista = ['ovo','farinha','trigo','massa'];
 
 // push() -> O método adiciona um novo elemento a uma matriz (no final),
 
-lista.push('macarrão');
-let novo = lista;
+//lista.push('macarrão');
+//let novo = lista;
 
-console.log(novo);
+//console.log(novo);
 
-// splice() -> O método pode ser usado para  remover ou adicionar novos itens a uma matriz
+//// splice() -> O método pode ser usado para  remover ou adicionar novos itens a uma matriz
 
-lista.splice(1,2);   
-let novo1 = lista;
+//lista.splice(1,2);   
+//let novo1 = lista;
 
-console.log(novo1);
+//console.log(novo1);
 
 // map()  -> O método cria uma nova matriz com os resultados de chamar uma função para cada elemento de matriz
 //        -> O método chama a função fornecida uma vez para cada elemento em uma matriz, em ordem
 //        -> Nota: este método não altera a matriz original.
 
-let numeros =[2,4,6,8];
+//let numeros =[2,4,6,8];
 
-let dobraNumeros = [];
-let dobraNumeros2 = [];
+//let dobraNumeros = [];
+//let dobraNumeros2 = [];
 
-dobraNumeros= numeros.map((item)=>{
-    return item * 2;
-});
+//dobraNumeros= numeros.map((item)=>{
+    //return item * 2;
+//});
 
-console.log(dobraNumeros);
+//console.log(dobraNumeros);
 
-dobraNumeros2 = numeros.map(function(item){
-    if(item > 4){
-        return item * 2;
-    }
-    else{
-        return item;
-    }
-});
+//dobraNumeros2 = numeros.map(function(item){
+    //if(item > 4){
+       // return item * 2;
+    //}
+    //else{
+       // return item;
+    //}
+//});
 
-console.log(dobraNumeros2);
+//console.log(dobraNumeros2);
 
 
 // filter() -> O método filter() cria uma array preenchido com todos os elementos de matriz que passam por um teste (fornecido como uma função).
@@ -83,3 +83,44 @@ lista3 = lista2.filter((item)=>{
 });
 
 console.log(lista3);
+
+let nome = ['claudinei','rose','milson','rosemara'];
+let nomeComR = nome.filter((item)=>{
+    return item.charAt(0) =='r';         // charAt() -> O método retorna o caractere em um índice especificado (posição) em uma sequência.
+
+});
+
+console.log(nomeComR);
+
+
+
+// find() -> O método retorna o valor do primeiro elemento em uma matriz que passa em um teste (fornecido como uma função)
+// sintaxe :
+//          array.find(function(item, index, arr),thisValue);
+
+// Exemplo 1
+let n = [1,5,8,10,99];
+
+let nfind = n.find((item)=>{
+    return item > 8;
+});
+
+console.log(nfind);
+
+// Exemplo 2
+let nomes = [
+    {id:1 ,nome:"Claudinei",sobrenome:"Messias"},
+    {id:2 ,nome:"Kelly",sobrenome:"Andrade"},
+    {id:3 ,nome:"Simone",sobrenome:"Soukar"},
+];
+
+let pessoas = nomes.find((item)=>{
+    return (item.sobrenome === 'Andrade');
+});
+
+console.log(pessoas);
+ 
+
+
+
+
