@@ -6,7 +6,7 @@ function adicionar(...nomes){
 
 }
 
-adicionar('Claudinei','Rose');
+adicionar('Claudinei','Rose'); // [ 'Claudinei', 'Rose' ]
 
 // Rest com Spread
 
@@ -19,7 +19,7 @@ function addNomes(names, ...newNames){
 }
 let names = ['Claudinei','Sheila'];
 
-let outros = addNomes(names,'Shayenne','Micaela','Margareth');
+let outros = addNomes(names,'Shayenne','Micaela','Margareth'); // [ 'Claudinei', 'Sheila', 'Shayenne', 'Micaela', 'Margareth' ]
 
 console.log(outros);
 
@@ -32,7 +32,19 @@ function somar(...numbers){
     }
     return soma;
 };
-console.log(somar(3,5,6));
+console.log(somar(3,5,6));   // 14
 
+/////
+function somar2(a,b,...c){
+    let resultado = a + b;
+
+    c.forEach(function(n){
+        return resultado += n;
+    })
+
+    return resultado;
+}
+
+console.log(somar2(1,2,3,4));   // 10
 
 
