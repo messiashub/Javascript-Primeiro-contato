@@ -12,7 +12,7 @@ convidados.forEach((nomes,posicao)=>{
     console.log(`${nomes.nome} está na posição ${posicao + 1}`);
 })
     
-let nomes = ['claudinei','rose','marilia']
+let nomes = ['claudinei','rose','marilia'];
 
 let tamanhoNome = 0;
 let nome1 = '';
